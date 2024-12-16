@@ -22,7 +22,7 @@ const CriarProdutoScreen = ({ navigation }) => {
     };
 
     axios
-      .post('http://192.168.1.6:6969/api/produto', produtoData)
+      .post('http://suaUrlDaApi/api/produto', produtoData)
       .then(() => {
         Alert.alert('Sucesso', 'Produto criado com sucesso!');
         navigation.navigate('ListarProdutos');
