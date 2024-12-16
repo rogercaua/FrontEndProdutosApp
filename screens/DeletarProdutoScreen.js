@@ -7,7 +7,7 @@ const DeletarProdutoScreen = ({ route, navigation }) => {
 
   const handleDelete = () => {
     axios
-      .delete(`http://192.168.1.6:6969/api/produto/${id}`)
+      .delete(`http://suaUrlDaApi/api/produto/${id}`)
       .then(() => {
         Alert.alert('Sucesso', 'Produto excluído com sucesso!');
         navigation.reset({
