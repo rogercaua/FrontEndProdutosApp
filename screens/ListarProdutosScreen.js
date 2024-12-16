@@ -27,7 +27,7 @@ const ListarProdutosScreen = ({ navigation }) => {
   const fetchProdutos = () => {
     setLoading(true);
     axios
-      .get('http://192.168.1.6:6969/api/produtos')
+      .get('http://suaUrlDaApi/api/produtos')
       .then((response) => {
         setProdutos(response.data);
         setError(null);
