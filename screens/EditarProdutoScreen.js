@@ -24,7 +24,7 @@ const EditarProdutoScreen = ({ route, navigation }) => {
 
   useEffect(() => {
     axios
-      .get(`http://192.168.1.6:6969/api/produtos/${id}`)
+      .get(`http://suaUrlDaApi/api/produtos/${id}`)
       .then((response) => {
         const data = response.data;
         setNome(data.nome || '');
@@ -55,7 +55,7 @@ const EditarProdutoScreen = ({ route, navigation }) => {
     }
 
     axios
-      .put(`http://192.168.1.6:6969/api/produto/${id}`, updatedData)
+      .put(`http://suaUrlDaApi/api/produto/${id}`, updatedData)
       .then(() => {
         Alert.alert('Sucesso', 'Produto atualizado com sucesso!');
         navigation.reset({
